@@ -1,0 +1,6 @@
+{
+  "name": "microblog-post-posts",
+  "dependencies": {
+    "@architect/functions": "^1.5.4"
+  }
+}

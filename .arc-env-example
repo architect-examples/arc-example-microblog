@@ -1,0 +1,4 @@
+# .arc-env
+@testing
+GITHUB_CLIENT_ID your-id-here
+GITHUB_CLIENT_SECRET your-secret-here

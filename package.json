@@ -4,9 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create": "AWS_PROFILE=personal AWS_REGION=us-east-1 arc-create",
+    "deploy": "AWS_PROFILE=personal AWS_REGION=us-east-1 arc-deploy",
+    "start": "nodemon --watch src -e js --exec NODE_ENV=testing AWS_PROFILE=personal AWS_REGION=us-east-1 arc-sandbox",
+    "dns": "AWS_PROFILE=personal AWS_REGION=us-east-1 arc-dns"
   },
   "keywords": [],
   "author": "Brian LeRoux <b@brian.io>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@architect/workflows": "^1.1.7",
+    "nodemon": "^1.11.0"
+  }
 }

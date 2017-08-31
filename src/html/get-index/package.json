@@ -1,0 +1,6 @@
+{
+  "name": "microblog-get-index",
+  "dependencies": {
+    "@architect/functions": "^1.5.4"
+  }
+}

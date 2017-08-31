@@ -1,0 +1,6 @@
+{
+  "name": "microblog-post-logout",
+  "dependencies": {
+    "@architect/functions": "^1.5.4"
+  }
+}
