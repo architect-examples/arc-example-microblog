@@ -1,6 +1,7 @@
 {
   "name": "microblog-post-posts",
   "dependencies": {
-    "@architect/functions": "^1.5.4"
+    "@architect/arc-exmaple-microblog-data": "^1.0.0",
+    "hashids": "^1.1.1"
   }
 }

@@ -10,4 +10,5 @@ post /posts # create a post
 
 @tables
 posts
-  postID *String
+  authorID *String
+  postID **String

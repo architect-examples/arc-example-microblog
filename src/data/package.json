@@ -1,0 +1,6 @@
+{
+  "name": "@architect/arc-example-microblog-data",
+  "dependencies": {
+    "@architect/data": "^1.0.1"
+  }
+}

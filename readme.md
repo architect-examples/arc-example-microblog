@@ -110,3 +110,32 @@ Now running `npm start` will be restart when any changes are made to `.js` files
 
 
 ## 04. Perform the oAuth Dance with Grace
+
+We'll add some middleware to `./src/html/get-login/auth`.
+
+- describe auth
+- describe 00
+- describe 01
+
+Add the following to `./src/html/get-index`:
+
+```javascript
+```
+
+Now we can see our authenticated account.
+
+## 05. Logout
+
+## 06. Posting a Post with `POST`
+
+## 07. Listing Posts
+
+## 08. Deleting Posts
+
+## 09. Editing Posts
+
+## 10. Theming
+
+## 11. Tests
+
+## 12. Setup a Custom Domain with DNS

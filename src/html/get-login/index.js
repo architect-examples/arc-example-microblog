@@ -1,21 +1,16 @@
 var arc = require('@architect/functions')
+var layout = require('@architect/arc-example-microblog-theme')
+var auth = require('./auth')
 
 function route(req, res) {
+  var url = 'https://github.com/login/oauth/authorize'
+  var scope = 'user:email'
+  var link = `
+    <a href=${url}?scope=${scope}&client_id=${process.env.GITHUB_CLIENT_ID}>Login with Github</a>
+  `
   res({
-    html: `
-      <html>
-      <head>
-        <title></title>
-      </head>
-      <body>
-      <p>Well, hello there!</p>
-      <p>We're going to now talk to the GitHub API. Ready?
-      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=${process.env.GITHUB_CLIENT_ID}">Click here</a> to begin!</a>
-      </p>
-      </body>
-     </html>
-    `
+    html: layout(link)
   })
 }
 
-exports.handler = arc.html.get(route)
+exports.handler = arc.html.get(auth, route)

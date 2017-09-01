@@ -1,8 +1,5 @@
 var arc = require('@architect/functions')
+var loggedIn = require('./00-logged-in')
+var loggedOut = require('./01-logged-out')
 
-function route(req, res) {
-  console.log(JSON.stringify(req, null, 2))
-  res({html:`hello world`})
-}
-
-exports.handler = arc.html.get(route)
+exports.handler = arc.html.get(loggedIn, loggedOut)
