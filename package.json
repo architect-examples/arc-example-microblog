@@ -13,7 +13,7 @@
   "author": "Brian LeRoux <b@brian.io>",
   "license": "Apache-2.0",
   "dependencies": {
-    "@architect/workflows": "^1.1.7",
+    "@architect/workflows": "^1.1.10",
     "nodemon": "^1.11.0"
   }
 }

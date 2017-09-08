@@ -1,0 +1,6 @@
+{
+  "name": "microblog-get-feed-json",
+  "dependencies": {
+    "@architect/functions": "^1.6.2"
+  }
+}

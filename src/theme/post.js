@@ -1,10 +1,12 @@
 /**
- * "authorID": "brianleroux",
-   "postID": "q7167XlYr",
-    "author": "Brian LeRoux",
-    "body": "asdfasdf 🥐\r\n",
-    "avatar": "https://avatars3.githubusercontent.com/u/990?v=4",
-    "created"
+ * {
+ *   authorID,
+ *   postID,
+ *   author,
+ *   body,
+ *   avatar,
+ *   created,
+ * }
 */
 module.exports = function _post(post) {
   return `

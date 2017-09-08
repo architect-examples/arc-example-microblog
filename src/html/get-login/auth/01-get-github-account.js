@@ -18,6 +18,11 @@ module.exports = function _account(params, callback) {
     if (err) {
       callback(err)
     }
+    else if (result.body.login != process.env.GITHUB_LOGIN) {
+      var e = Error('invalid_github')
+      e.code = 403
+      callback(e)
+    }
     else {
       callback(null, {
         token: params.token, 

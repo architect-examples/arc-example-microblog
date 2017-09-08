@@ -2,6 +2,10 @@
 
 - Ensure you have AWS credentials setup
 - Register an app with Github and make note of the Client ID and the Client Secret; use http://localhost:3333/login for the redirect url
+- Ensure you have an `.arc-env` file setup (look at `.arc-env-example` for an example)
+
+---
+FIXNME everything below is a WIP tutorial !
 
 ## 01. Create an `.arc` Project
 

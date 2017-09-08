@@ -30,7 +30,12 @@ module.exports = function auth(req, res, next) {
       }
     ],
     function _done(err, account) {
-      if (err) {
+      if (err && err.code === 403) {
+        res({
+          location:'/'
+        })
+      }
+      else if (err) {
         res(err)
       }
       else {

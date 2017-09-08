@@ -1,3 +1,6 @@
 {
-  "name":"@architect/arc-example-microblog-theme"
+  "name": "@architect/arc-example-microblog-theme",
+  "dependencies": {
+    "@smallwins/validate": "^4.3.0"
+  }
 }

@@ -1,5 +1,5 @@
 var data = require('@architect/arc-example-microblog-data')
-var layout = require('@architect/arc-example-microblog-theme')
+var tmpl = require('@architect/arc-example-microblog-theme')
 var post = require('@architect/arc-example-microblog-theme/post')
 var addPermalink = require('./_add-permalink')
 
@@ -15,9 +15,9 @@ module.exports = function home(req, res) {
       res(err)
     }
     else {
+      var layout = tmpl.bind({}, req)
       var link = addPermalink.bind({}, req)
       var body = `
-        <a href=${req._url('/login')}>login</a>
         ${results.Items.map(link).map(post).join('')}
       `
       res({

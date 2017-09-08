@@ -1,9 +1,8 @@
 var data = require('@architect/arc-example-microblog-data')
-var layout = require('@architect/arc-example-microblog-theme')
+var tmpl = require('@architect/arc-example-microblog-theme')
 var post = require('@architect/arc-example-microblog-theme/post')
-//require('./_post')
+var postForm = require('@architect/arc-example-microblog-theme/post-form')
 var addPermalink = require('./_add-permalink')
-var postForm = require('./_post-form')
 
 module.exports = function auth(req, res, next) {
   if (req.session.isLoggedIn) {
@@ -18,10 +17,10 @@ module.exports = function auth(req, res, next) {
         res(err)
       }
       else {
+        var layout = tmpl.bind({}, req)
         var link = addPermalink.bind({}, req)
         var body = postForm({
-          logoutUrl: req._url('/logout'),
-          postsUrl: req._url('/posts'),
+          url: req._url('/posts'),
           avatar: req.session.account.avatar,
           name: req.session.account.name,
         })

@@ -1,15 +1,12 @@
 var arc = require('@architect/functions')
-var layout = require('@architect/arc-example-microblog-theme')
+var tmpl = require('@architect/arc-example-microblog-theme')
+var link = require('@architect/arc-example-microblog-theme/link')
 var auth = require('./auth')
 
 function route(req, res) {
-  var url = 'https://github.com/login/oauth/authorize'
-  var scope = 'user:email'
-  var link = `
-    <a href=${url}?scope=${scope}&client_id=${process.env.GITHUB_CLIENT_ID}>Login with Github</a>
-  `
+  var layout = tmpl.bind({}, req)
   res({
-    html: layout(link)
+    html: layout(link())
   })
 }
 
