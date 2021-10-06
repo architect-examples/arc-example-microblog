@@ -1,3 +1,5 @@
+⚠️ *This repository is archived. For an updated list of examples see [arc.codes/examples](https://arc.codes/examples).*
+
 ## Prereqs
 
 - Ensure you have AWS credentials setup
